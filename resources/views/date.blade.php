@@ -18,9 +18,10 @@
   <main class="main">
     <a href="" class="page_btn">＜</a>
     <?php
-      print('Y-G-i');
-      ?>
+    print('Y-G-i');
+    ?>
     <a href="" class="page_btn">＞</a>
+    @section('content')
     <table>
       <tr>
         <th>名前</th>
@@ -29,12 +30,16 @@
         <th>休憩開始</th>
         <th>休憩終了</th>
       </tr>
+      @foreach($items as $item)
       <tr>
-        <td>{{$stamp}}</td>
-        <?php
-        print(date('G:i:s'));
-        ?>
+        <td>{{$item->name}}</td>
+        <td>{{$item->start_time}}</td>
+        <td>{{$item->end_time}}</td>
+        <td>{{$item->start_time}}</td>
+        <td>{{$item->end_time}}</td>
+        @endforeach
     </table>
+    @endsection
   </main>
   <footer class="footer">
     <small>Atte,inc.</small>

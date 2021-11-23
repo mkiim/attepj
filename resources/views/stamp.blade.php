@@ -14,11 +14,13 @@
     <p>ログアウト</p>
   </header>
   <main class="main">
-    <h2>{{$name}}さんお疲れ様です！</h2>
-    <div>勤務開始</div>
-    <div>勤務終了</div>
-    <div>休憩開始</div>
-    <div>休憩終了</div>
+    <h2>{{$guest}}</h2>
+  <form action="" method="POST">
+    <button type="submit" name="start">勤務開始</button>
+    <button type="submit" name="stop">勤務終了</button>
+    <button type="submit" name="start">休憩開始</button>
+    <button type="submit" name="stop">休憩終了</button>
+  </form>
   </main>
   <footer class="footer">
     <small>Atte,inc.</small>
